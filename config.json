@@ -29,7 +29,12 @@
     "CodeSetup-stable-3.31.15.exe",
     "audiodg.exe",
     "pythonw.exe",
-    "Wispr Flow.exe"
+    "Wispr Flow.exe",
+    "Cursor.exe",
+    "msiexec.exe",
+    "robotaskbaricon.exe",
+    "msedge.exe",
+    "SrTasks.exe"
   ],
   "ignore_names": [],
   "log_file": "process_hunter.log",
