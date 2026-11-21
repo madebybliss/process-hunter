@@ -1,0 +1,38 @@
+{
+  "poll_interval_seconds": 7,
+  "cpu_threshold_percent": 15.0,
+  "cpu_sustained_polls": 3,
+  "max_recent_alerts": 10,
+  "blocklist": [
+    "SearchIndexer.exe",
+    "TextInputHost.exe",
+    "PhoneExperienceHost.exe",
+    "OneDriveSetup.exe",
+    "NetworkCap.exe",
+    "BridgeCommunication.exe",
+    "wsappx.exe",
+    "DiagsCap.exe",
+    "NetworkCap.exe",
+    "SysInfoCap.exe",
+    "CompatTelRunner.exe",
+    "*HyperVM*",
+    "AppHelperCap.exe"
+  ],
+  "banlist": [],
+  "allowlist": [
+    "Surfshark.exe",
+    "Surfshark.AntivirusService.exe",
+    "TestHot.exe",
+    "UniqueHotProc.exe",
+    "endpointprotection.exe",
+    "MiniMax Code.exe",
+    "CodeSetup-stable-3.31.15.exe",
+    "audiodg.exe",
+    "pythonw.exe",
+    "Wispr Flow.exe"
+  ],
+  "ignore_names": [],
+  "log_file": "process_hunter.log",
+  "IDE": "Cursor.exe",
+  "VPN": "*Surfshark*.exe"
+}

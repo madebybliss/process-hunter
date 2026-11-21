@@ -1,0 +1,37 @@
+Added
+- Process Hunter Windows tray app: auto-kill hard blocklist processes
+- High-CPU and suspicious-path heuristics with toast notifications
+- Tray menu: monitoring toggle, recent alerts (kill/ignore), open config, view log
+- Configurable config.json (blocklist, CPU thresholds, poll interval)
+- Never-kill safelist for critical Windows processes
+- run.bat launcher and README with WSearch / elevation tips
+
+Changed
+- run.bat now self-elevates and runs Process Hunter as Administrator (UAC prompt)
+
+Added
+- install_startup.bat / uninstall_startup.bat — elevated logon Task Scheduler entry
+- start_hidden.bat — console-free launcher used by the startup task
+- Wildcard blocklist/ignore patterns (`Cursor*`, `*Host.exe`, `*Cursor*`) in config.json
+- Full-screen-top red alert banner for suspicious/high-CPU findings with Kill, Open folder, and Open folder + kill + delete actions
+- Persistent `banlist` in config.json; Kill and ban / Kill+ban+delete from banner and tray; banned names auto-killed on sight
+- Tray Ban list menu: add name/pattern, ban a running process, show current bans
+- Allow list (`allowlist`) with banner/tray "Add to allow list"; safeguarded from flags and auto-kill
+- Banner headline/type by cause: suspicious file, high load (orange), or both
+- Banner "Submit to VirusTotal" button (SHA-256 lookup/upload via VIRUSTOTAL_API_KEY in .env)
+
+Fixed
+- Allow list: high-load banner no longer reappears after adding a process; suppress queued banners and CPU re-alerts for that name
+
+Added
+- Banner minimize (top-right) collapses to a small Expand tab so other apps stay usable
+- Banner "More info" gathers file/process intelligence (hashes, version, signature, cmdline, parent, network)
+
+Fixed
+- VirusTotal / info dialog buttons no longer clipped; button bar pinned to bottom with wider window
+
+Added
+- More info report ends with a heuristic safety verdict (likely safe / caution / suspicious / high risk)
+
+Fixed
+- Delete/kill-delete retries locked Temp files (kill holders, takeown/icacls); More info handles Access Denied (e.g. DismHost.exe)
